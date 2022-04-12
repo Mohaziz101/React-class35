@@ -1,0 +1,9 @@
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title-container-title {
+    margin-right: auto;
+}
