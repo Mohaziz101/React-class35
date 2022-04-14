@@ -10,3 +10,15 @@
   white-space: nowrap;
   padding-top: 8px;
 }
+.product-image-container {
+    position: relative;
+}
+
+.product-image {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}

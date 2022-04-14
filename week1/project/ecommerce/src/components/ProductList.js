@@ -8,7 +8,7 @@ function ProductList({ products }) {
       <ul className="products-list">
         {products.map((product) => {
           return (
-            <li key={`product-${product.id}`} className="products-item">
+            <li key={`${product.id}`} className="products-item">
               <Product title={product.title} image={product.image} />
             </li>
           );

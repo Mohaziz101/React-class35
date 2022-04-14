@@ -11,7 +11,7 @@ function App() {
 
   const [products, setProducts] = useState(dataProducts);
 
-  function onToggle(category) {
+  function performToggle(category) {
     setSelectedCategory(category);
     const filteredItems = dataProducts.filter((product) => {
       return product.category === category.substring(6);
@@ -25,7 +25,7 @@ function App() {
       <Categories
         categories={dataCategories}
         selectedCategory={selectedCategory}
-        onToggle={onToggle}
+        performToggle={performToggle}
       />
       <ProductList products={products} />
     </>
