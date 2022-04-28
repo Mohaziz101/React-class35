@@ -1,5 +1,7 @@
 .categories {
   display: flex;
+ 
+  
 }
 
 .categories-item {
@@ -8,6 +10,7 @@
   margin: 2px;
   font-weight: 700;
   cursor: pointer;
+ 
 }
 
 .categories-item:hover {

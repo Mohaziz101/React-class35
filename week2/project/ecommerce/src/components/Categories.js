@@ -8,7 +8,7 @@ function Categories({ categories, selectedCategory, performToggle }) {
           <div
             key={`category-${category}`}
             className={`categories-item ${
-              selectedCategory === category && 'categories-item-selected'
+              selectedCategory === category ? 'categories-item-selected' : ''
             }`}
             onClick={() => performToggle(category)}
           >

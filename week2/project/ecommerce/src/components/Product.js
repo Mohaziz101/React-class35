@@ -1,13 +1,19 @@
-import '../css/Product.css';
+import { Link } from "react-router-dom";
 
-function Product({ title, image }) {
+import ProductImage from "./ProductImage";
+
+import "../css/Product.css";
+
+function Product({ id, title, image }) {
   return (
-    <div className="product">
-      <img className="product-image " src={image} alt={title} />
-      <span className="product-title" title={title}>
-        {title}
-      </span>
-    </div>
+    <Link to={`/product/${id}`}>
+      <div className="product">
+        <ProductImage productId={id} image={image} />
+        <span className="product-title">
+          {title}
+        </span>
+      </div>
+    </Link>
   );
 }
 
