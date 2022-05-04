@@ -1,0 +1,22 @@
+.categories {
+  display: flex;
+ 
+  
+}
+
+.categories-item {
+  background-color: #efeff0;
+  padding: 12px;
+  margin: 2px;
+  font-weight: 700;
+  cursor: pointer;
+ 
+}
+
+.categories-item:hover {
+  background-color: #d6d6d8;
+}
+
+.categories-item-selected {
+  background-color: #bdbdc1;
+}

@@ -1,0 +1,10 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-title {
+  padding-top: 8px;
+  text-align: center;
+}
