@@ -44,7 +44,7 @@ function Products() {
 
   useEffect(() => {
     let url = 'https://fakestoreapi.com/products';
-    if (selectedCategory != null) {
+    if (selectedCategory !== null) {
       url = `https://fakestoreapi.com/products/category/${selectedCategory}`;
     }
 

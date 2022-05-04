@@ -6,7 +6,7 @@ function Categories({ categories, selectedCategory, performToggle }) {
       {categories.map((category) => {
         return (
           <div
-            key={`category-${category}`}
+            key={`${category}`}
             className={`categories-item ${
               selectedCategory === category ? 'categories-item-selected' : ''
             }`}
