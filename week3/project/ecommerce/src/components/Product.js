@@ -9,7 +9,7 @@ function Product({ id, title, image }) {
     <Link to={`/product/${id}`}>
       <div className="product">
         <ProductImage productId={id} image={image} />
-        <span className="product-title" title={title}>
+        <span className="product-title">
           {title}
         </span>
       </div>

@@ -1,16 +1,16 @@
 import '../css/Categories.css';
 
-function Categories({ categories, selectedCategory, onToggle }) {
+function Categories({ categories, selectedCategory, performToggle}) {
   return (
     <div className="categories">
       {categories.map((category) => {
         return (
           <div
-            key={`${category}`}
+            key={`category-${category}`}
             className={`categories-item ${
               selectedCategory === category ? 'categories-item-selected' : ''
             }`}
-            onClick={() => onToggle(category)}
+            onClick={() => performToggle(category)}
           >
             {category}
           </div>

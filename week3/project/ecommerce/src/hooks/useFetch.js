@@ -1,26 +1,30 @@
 import { useState } from 'react';
 
-const useFetch = (url, onReceived) => {
+const useFetch = (onReceived) => {
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const performFetch = () => {
+  const performFetch = (url) => {
     setError(false);
     setIsLoading(true);
 
     const callFetch = async () => {
-      const res = await fetch(url);
-
-      if (!res.ok) {
-        console.error(res);
-        setError(true);
+      try {
+        const res = await fetch(url);
+  
+        if (!res.ok) {
+          console.error(res);
+          setError(true);
+        }
+  
+        const jsonResult = await res.json();
+  
+        onReceived(jsonResult);
+  
+        setIsLoading(false);
+      } catch(err) {
+        setError(true)
       }
-
-      const jsonResult = await res.json();
-
-      onReceived(jsonResult);
-
-      setIsLoading(false);
     };
 
     try {

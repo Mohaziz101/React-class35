@@ -10,17 +10,16 @@ import '../css/ProductDetails.css';
 function ProductDetails() {
   const { id } = useParams();
 
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState({});
   const [isLoading, error, performFetch] = useFetch(
-    `https://fakestoreapi.com/products/${id}`,
     setProduct,
   );
 
   useEffect(() => {
-    performFetch();
+    performFetch(`https://fakestoreapi.com/products/${id}`);
   }, [id]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  if (error || product === null) {
+  if (error) {
     return (
       <>
         <Title

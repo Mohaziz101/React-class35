@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.product-details-information img {
-  order: 0;
-  max-height: 80vh;
-}
 
 .product-details-image {
   min-width: 50%;
